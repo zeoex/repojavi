@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "n8n": {
+      "type": "http",
+      "url": "http://186.123.181.61:5678/mcp-server/http"
+    }
+  }
+}
