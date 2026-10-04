@@ -1,0 +1,585 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', 'Liberation Sans', 'DejaVu Sans', sans-serif; color: #1b1f24; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 22mm 20mm 18mm; }
+  .page:last-child { page-break-after: auto; }
+
+  /* Portada */
+  .cover { background: #0f1720; color: #f3f5f7; display: flex; flex-direction: column; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: 10pt; color: #8fb3ff; font-weight: 600; }
+  .cover h1 { font-size: 34pt; line-height: 1.08; font-weight: 800; margin: 5mm 0 4mm; letter-spacing: -.02em; }
+  .cover .lead { font-size: 12pt; color: #b8c2cc; max-width: 140mm; line-height: 1.45; }
+  .index { margin-top: 22mm; columns: 2; column-gap: 12mm; }
+  .ig { break-inside: avoid; margin-bottom: 9mm; }
+  .ig-cat { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; margin-bottom: 2mm; filter: brightness(1.6); }
+  .ii { display: flex; align-items: baseline; font-size: 12pt; padding: 1.6mm 0; }
+  .ii-name { font-weight: 500; }
+  .ii-dots { flex: 1; border-bottom: 1px dotted #4a5561; margin: 0 2mm; transform: translateY(-1mm); }
+  .ii-pag { color: #8b97a3; font-variant-numeric: tabular-nums; }
+
+  /* Producto */
+  .band { position: absolute; top: 0; left: 0; right: 0; height: 7mm; background: var(--c); }
+  .cat { text-transform: uppercase; letter-spacing: .16em; font-size: 9pt; font-weight: 700; color: var(--c); margin-top: 4mm; }
+  h2 { font-size: 36pt; font-weight: 800; letter-spacing: -.02em; margin: 3mm 0 3mm; line-height: 1.05; }
+  .tagline { font-size: 15pt; color: #4a5561; line-height: 1.35; max-width: 160mm; }
+  .meta { margin: 14mm 0 13mm; display: grid; gap: 4mm; padding: 6mm 0; border-top: 1px solid #e3e7eb; border-bottom: 1px solid #e3e7eb; }
+  .meta > div { display: grid; grid-template-columns: 34mm 1fr; align-items: center; }
+  .lbl { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .12em; color: #7a8590; font-weight: 600; }
+  .val { font-size: 11.5pt; font-weight: 500; }
+  .chips { display: flex; flex-wrap: wrap; gap: 2mm; }
+  .chip { font-size: 9.5pt; padding: 1.2mm 3mm; border-radius: 99px; background: color-mix(in srgb, var(--c) 10%, white); color: color-mix(in srgb, var(--c) 80%, black); font-weight: 600; }
+  h3 { font-size: 10pt; text-transform: uppercase; letter-spacing: .14em; color: #7a8590; font-weight: 700; margin-bottom: 5mm; }
+  .fn { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm 10mm; }
+  .fn li { display: flex; gap: 3mm; align-items: flex-start; font-size: 12.5pt; line-height: 1.4; }
+  .fn svg { flex: none; margin-top: .3mm; }
+  .dif { margin-top: 16mm; padding: 7mm 8mm; border-radius: 4mm; background: color-mix(in srgb, var(--c) 7%, white); border-left: 2mm solid var(--c); }
+  .dif p { font-size: 13pt; font-weight: 600; line-height: 1.4; margin-top: 2mm; }
+  footer { position: absolute; left: 20mm; right: 20mm; bottom: 12mm; display: flex; justify-content: space-between; font-size: 9.5pt; color: #7a8590; border-top: 1px solid #e3e7eb; padding-top: 3mm; }
+  footer b { color: #1b1f24; font-weight: 600; }
+  .pn { font-variant-numeric: tabular-nums; }
+</style></head><body>
+<section class="page cover">
+  <div class="cover-head">
+    <div class="eyebrow">Portafolio de productos</div>
+    <h1>Software de gestión<br>para cada rubro</h1>
+    <p class="lead">21 sistemas desarrollados a medida, listos para adaptarse a tu negocio.</p>
+  </div>
+  <div class="index">
+    
+      <div class="ig">
+        <div class="ig-cat" style="color:#1f6feb">Comercio y punto de venta</div>
+        <div class="ii"><span class="ii-name">EvoPOS</span><span class="ii-dots"></span><span class="ii-pag">2</span></div><div class="ii"><span class="ii-name">EvoPOS Moda</span><span class="ii-dots"></span><span class="ii-pag">3</span></div><div class="ii"><span class="ii-name">EvoPOS Librería</span><span class="ii-dots"></span><span class="ii-pag">4</span></div><div class="ii"><span class="ii-name">EvoPOS Panadería en Ruta</span><span class="ii-dots"></span><span class="ii-pag">5</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#d9480f">Gastronomía</div>
+        <div class="ii"><span class="ii-name">ResTito</span><span class="ii-dots"></span><span class="ii-pag">6</span></div><div class="ii"><span class="ii-name">ResTito Café</span><span class="ii-dots"></span><span class="ii-pag">7</span></div><div class="ii"><span class="ii-name">Cocina ERP</span><span class="ii-dots"></span><span class="ii-pag">8</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#2b8a3e">Industria y distribución</div>
+        <div class="ii"><span class="ii-name">EvoPOS Fábrica</span><span class="ii-dots"></span><span class="ii-pag">9</span></div><div class="ii"><span class="ii-name">EvoPOS Planta</span><span class="ii-dots"></span><span class="ii-pag">10</span></div><div class="ii"><span class="ii-name">Reparto360</span><span class="ii-dots"></span><span class="ii-pag">11</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#0c8599">Logística y ventas en calle</div>
+        <div class="ii"><span class="ii-name">EvoLogX</span><span class="ii-dots"></span><span class="ii-pag">12</span></div><div class="ii"><span class="ii-name">EvoLogX Vendedor</span><span class="ii-dots"></span><span class="ii-pag">13</span></div><div class="ii"><span class="ii-name">EvoLogX Transporte</span><span class="ii-dots"></span><span class="ii-pag">14</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#7048e8">Finanzas</div>
+        <div class="ii"><span class="ii-name">EvoPrest</span><span class="ii-dots"></span><span class="ii-pag">15</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#c2255c">Servicios técnicos</div>
+        <div class="ii"><span class="ii-name">EvoPOS Service</span><span class="ii-dots"></span><span class="ii-pag">16</span></div><div class="ii"><span class="ii-name">MotiZ</span><span class="ii-dots"></span><span class="ii-pag">17</span></div><div class="ii"><span class="ii-name">EvoSeguridad</span><span class="ii-dots"></span><span class="ii-pag">18</span></div>
+      </div>
+      <div class="ig">
+        <div class="ig-cat" style="color:#e67700">Turnos y servicios</div>
+        <div class="ii"><span class="ii-name">Turnos Pro</span><span class="ii-dots"></span><span class="ii-pag">19</span></div><div class="ii"><span class="ii-name">ZenitStudio</span><span class="ii-dots"></span><span class="ii-pag">20</span></div><div class="ii"><span class="ii-name">TuGym Online</span><span class="ii-dots"></span><span class="ii-pag">21</span></div><div class="ii"><span class="ii-name">GestorPro</span><span class="ii-dots"></span><span class="ii-pag">22</span></div>
+      </div>
+  </div>
+</section>
+<section class="page prod" style="--c:#1f6feb">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Comercio y punto de venta</div>
+    <h2>EvoPOS</h2>
+    <p class="tagline">Punto de venta y gestión integral para comercios con una o varias sucursales.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Almacenes, autoservicios, fiambrerías y redes de sucursales</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">App Android</span><span class="chip">Windows</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS con lector de código de barras, pago combinado y cuotas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Factura electrónica ARCA/AFIP</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Multisucursal: transferencias, remitos y pedidos centralizados</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock por depósito con lotes, vencimientos y variantes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compras, proveedores, cuentas a pagar y Libro IVA</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Programa de puntos con canje</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tienda online con cobro por Mercado Pago</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Balanzas, etiquetas de góndola y cartelería digital</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Ediciones Básico, Pro y Premium con módulos que se activan según el negocio.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Red de 6 sucursales con ~12.000 artículos</b></span>
+    <span class="pn">2</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#1f6feb">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Comercio y punto de venta</div>
+    <h2>EvoPOS Moda</h2>
+    <p class="tagline">Punto de venta y tienda online para vender por talle y color.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Tiendas de ropa, indumentaria y calzado</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">App Android</span><span class="chip">Windows</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock por talle y color con variantes independientes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hasta 8 fotos por prenda, asignadas por variante</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tienda online con cuentas de clientas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento del pedido web con avisos por mail</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Vidriera de ofertas con botón a WhatsApp</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS con factura electrónica ARCA/AFIP</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cuenta corriente y programa de puntos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Etiquetas, promociones y cambios masivos de precio</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Del mostrador a la web, todo trabaja por variante: la clienta ve la foto exacta de lo que elige.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Modas Eva</b></span>
+    <span class="pn">3</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#1f6feb">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Comercio y punto de venta</div>
+    <h2>EvoPOS Librería</h2>
+    <p class="tagline">Gestión y punto de venta pensados para librerías y papelerías.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Librerías, papelerías y textos escolares</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ficha de libro con ISBN, autor y editorial</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Encargues de títulos con seña y aviso al cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Listas escolares por grado cotizadas como presupuesto</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Devolución a editoriales con nota de crédito</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS con lector de código de barras y Mercado Pago</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Factura electrónica ARCA/AFIP y Libro IVA</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tienda online propia</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Varias sucursales y fidelización con puntos</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Resuelve los circuitos propios de una librería: encargues, listas escolares y devoluciones.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Milka Libros</b></span>
+    <span class="pn">4</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#1f6feb">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Comercio y punto de venta</div>
+    <h2>EvoPOS Panadería en Ruta</h2>
+    <p class="tagline">Cada camioneta es un depósito móvil que vende y factura en la calle.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Panaderías y distribuidoras con camionetas de reparto</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">App Android</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Camionetas como depósitos móviles con stock propio</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Carga de camioneta con remito, conteo y firma</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Venta en la calle desde el celular</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Facturas A, B y C emitidas en el momento</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Numeración fiscal separada por camioneta</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Importación del histórico del sistema anterior</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cuentas corrientes, caja y presupuestos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f6feb" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1f6feb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Programa de puntos y reportes de venta</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Varios choferes facturan a la vez con un solo CUIT y sin cruces de numeración.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Panadería Benja</b></span>
+    <span class="pn">5</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#d9480f">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Gastronomía</div>
+    <h2>ResTito</h2>
+    <p class="tagline">Salón, cocina, delivery y menú online sincronizados en tiempo real.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Restaurantes, pizzerías y bares con delivery</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web / PWA</span><span class="chip">App Android repartidor</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mesas: abrir, transferir, unir y cobrar</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>App del mozo con comandas a cocina</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pantalla de cocina sincronizada al instante</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Menú online con envío calculado por distancia</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Delivery con repartidor y navegación GPS</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Caja, reportes y productos más vendidos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Impresión de comandas en impresora térmica</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cartelería digital, stock y Mercado Pago</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Un solo sistema conecta salón, cocina, delivery y pedidos web, en vivo.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">6</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#d9480f">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Gastronomía</div>
+    <h2>ResTito Café</h2>
+    <p class="tagline">Mesas, cocina, delivery y producción propia conectados en tiempo real.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Cafeterías, take away y gastronomía con fábrica propia</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web / PWA</span><span class="chip">Apps Android: mozo, cocina, repartidor</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mesas por zona y comandas en vivo a cocina</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pantalla de cocina (KDS) sin login</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Carta QR y pedidos online por WhatsApp o Mercado Pago</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cobro en mostrador con QR</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Delivery con seguimiento en vivo para el cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Factura electrónica ARCA/AFIP</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fábrica: recetas, insumos, remitos y costo real</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cartelería digital en TV</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Une salón, take away, delivery con GPS y la fábrica propia, sin instalar nada.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>CafeZito</b></span>
+    <span class="pn">7</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#d9480f">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Gastronomía</div>
+    <h2>Cocina ERP</h2>
+    <p class="tagline">De la receta a la entrega: producción, pedidos y finanzas integradas.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Fábricas de alimentos, mayoristas, catering y eventos</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Recetas con subrecetas, merma y costeo automático</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Planificación MRP con sugerencia de compras</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Órdenes de producción con consumo de insumos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Inventario por lotes con trazabilidad</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pedidos con seña y presupuestos convertibles</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Calendario de eventos y catering</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Logística de envíos con repartidores</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d9480f" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#d9480f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Finanzas, cuentas corrientes y reportes PDF/Excel</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Planifica la producción y calcula el costo real de cada receta.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Reyes de la Cocina</b></span>
+    <span class="pn">8</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#2b8a3e">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Industria y distribución</div>
+    <h2>EvoPOS Fábrica</h2>
+    <p class="tagline">Del presupuesto a la fábrica y a la venta, sin perder nada.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Fábricas con salón de ventas: colchonerías, muebles, manufactura</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">POS móvil (PWA)</span><span class="chip">Pantalla TV de planta</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Punto de venta con varios medios de pago</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Factura electrónica ARCA/AFIP y consulta de padrón</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Circuito presupuesto → producción → venta</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tablero de producción en TV para la planta</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Consumo de materia prima y costo real</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock de planta y salón con transferencias</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Legajos, entrega de EPP y fichada por PIN</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cuentas corrientes, caja y QR de Mercado Pago</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Une el mostrador, la facturación y la planta en un solo sistema.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Colflex Colchones &amp; Sommiers</b></span>
+    <span class="pn">9</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#2b8a3e">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Industria y distribución</div>
+    <h2>EvoPOS Planta</h2>
+    <p class="tagline">Del pedido a la entrega: producción, calidad y reparto integrados.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Fábricas y distribuidoras que producen, envasan y reparten</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web (PC y celular)</span><span class="chip">Pantallas móviles de chofer</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pedidos con reserva automática de stock por lote</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fórmulas versionadas y órdenes de producción</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Control de calidad con lote en cuarentena</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Trazabilidad: materia prima → envasado → cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hojas de ruta con vehículo, chofer y paradas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Entregas parciales, reprogramaciones y devoluciones</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Facturación electrónica sobre lo entregado</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compras, caja, cuentas corrientes y Libro IVA</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Fábrica, depósito, reparto y facturación con trazabilidad completa por lote.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Interquim</b></span>
+    <span class="pn">10</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#2b8a3e">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Industria y distribución</div>
+    <h2>Reparto360</h2>
+    <p class="tagline">Pedidos, repartos optimizados y envases retornables bajo control.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Distribuidoras de agua, soda, garrafas y reparto a domicilio</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web</span><span class="chip">App Android repartidor</span><span class="chip">Seguimiento web del cliente</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Clientes con direcciones georreferenciadas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pedidos y entregas recurrentes programadas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hojas de ruta con orden óptimo de paradas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>App del repartidor con ruta y entregas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento del pedido con hora estimada</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Control de envases retornables por cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock por depósito, listas de precios y comodatos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2b8a3e" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#2b8a3e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Presupuestos, facturas, pagos y caja diaria</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Ventas, ruteo optimizado y control de envases, con seguimiento en vivo.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>AguaVida</b></span>
+    <span class="pn">11</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#0c8599">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Logística y ventas en calle</div>
+    <h2>EvoLogX</h2>
+    <p class="tagline">Gestión, preventa en calle y reparto en un solo sistema.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Distribuidoras mayoristas con vendedores y reparto propio</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web</span><span class="chip">App Android del vendedor (offline)</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS, factura electrónica, caja y Libro IVA</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock multisucursal con lotes y transferencias</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Vendedores, zonas y cartera de clientes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Frecuencias y planificación de visitas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pedidos desde el celular sin conexión</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>GPS de la jornada y mapa de vendedores</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tablero de pedidos con aprobación</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Armado y despacho de reparto por camión</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Un ERP de venta probado, más preventa móvil, GPS y logística de reparto.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">12</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#0c8599">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Logística y ventas en calle</div>
+    <h2>EvoLogX Vendedor</h2>
+    <p class="tagline">Tus empresas, tus clientes y tus comisiones, en un solo lugar.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Representantes comerciales y vendedores a comisión</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web</span><span class="chip">App Android (offline)</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Catálogo por empresa representada con 3 listas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Presupuestos y pedidos en PDF</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cálculo de comisiones y cierre de mes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Clientes con varias direcciones y zonas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Planificación de visitas por cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pedidos desde el celular sin conexión</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ubicación GPS de vendedores en mapa</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Armado de reparto con camiones</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Liquida comisiones por cada empresa representada, automáticamente.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">13</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#0c8599">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Logística y ventas en calle</div>
+    <h2>EvoLogX Transporte</h2>
+    <p class="tagline">Envíos, reparto y seguimiento en tiempo real para tu transporte.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Transportes de paquetería y encomiendas, incluida carga refrigerada</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web admin y web pública</span><span class="chip">App Android del chofer (offline)</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Guías de envío con bultos y seguimiento público</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tarifas por zona, tramo y cliente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reparto con control de capacidad y frío</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hojas de ruta con paradas optimizadas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>App del chofer con GPS y aviso por WhatsApp</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Web pública: cotizador y seguimiento con mapa</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Legajos, recibos de sueldo y portal del empleado</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0c8599" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0c8599" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mantenimiento de flota y facturación electrónica</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Todo el circuito, del cotizador web a la entrega firmada.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Transporte Los Primos</b></span>
+    <span class="pn">14</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#7048e8">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Finanzas</div>
+    <h2>EvoPrest</h2>
+    <p class="tagline">Préstamos y cobranzas diarias, ordenados y al día desde el celular.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Prestamistas, financieras y cobranza en calle</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">App Android</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Simulador por tasa, cuota diaria o total</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plan de cuotas francés, directo o sin interés</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cuotas diarias que saltean domingos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cobranza por cuota con punitorios automáticos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Refinanciación con trazabilidad completa</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cartera por rutas y cobradores</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cierre semanal de ruta con metas</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#7048e8" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#7048e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Avisos automáticos por WhatsApp y mail</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Pensado para quien presta «a tanto por día»: se carga en pesos, no en porcentajes.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">15</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#c2255c">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Servicios técnicos</div>
+    <h2>EvoPOS Service</h2>
+    <p class="tagline">Reparaciones y ventas en un solo sistema, con seguimiento online.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Servicio técnico de celulares, consolas y electrónica</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">POS sin conexión</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Órdenes de reparación con estados e historial</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Recepción con checklist, fotos y firma digital</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento público por QR o link</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Avisos al cliente por WhatsApp</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Garantías por tipo y por días</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS con QR de Mercado Pago</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Factura electrónica y cuentas corrientes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Caja, stock en varios depósitos y fidelización</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>La reparación se factura y descuenta stock en el mismo sistema que el mostrador.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>Chacogamer</b></span>
+    <span class="pn">16</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#c2255c">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Servicios técnicos</div>
+    <h2>MotiZ</h2>
+    <p class="tagline">El taller de motos ordenado, desde la recepción hasta la entrega.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Talleres mecánicos de motos</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web</span><span class="chip">App Android</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Órdenes de trabajo con repuestos y mano de obra</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ficha de cada moto: marca, modelo y cilindrada</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Estados configurables con historial</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento online para el cliente, sin login</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Retiro y devolución a domicilio</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fotos y firma digital en la recepción</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Comprobante de entrega doble y firmado</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stock de repuestos, técnicos y roles</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Entrega con doble comprobante firmado y logística de retiro a domicilio.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">17</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#c2255c">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Servicios técnicos</div>
+    <h2>EvoSeguridad</h2>
+    <p class="tagline">Clientes, equipos, visitas y abonos de seguridad bajo control.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Instaladores de cámaras, alarmas, redes y control de acceso</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web</span><span class="chip">App Android</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sitios del cliente con contactos y mapa</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Inventario de equipos por sitio</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Registro de redes, IP y proveedor de internet</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bóveda de claves cifrada con auditoría</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Visitas técnicas con fotos y materiales</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mantenimientos preventivos programados</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abonos mensuales con control de cobro</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c2255c" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#c2255c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>POS, stock y facturación electrónica incluidos</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Legajo técnico de cada instalación, claves cifradas y facturación juntos.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>GB Seguridad Electrónica</b></span>
+    <span class="pn">18</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#e67700">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Turnos y servicios</div>
+    <h2>Turnos Pro</h2>
+    <p class="tagline">Agenda, recepción y llamado de pacientes, sin depender de internet.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Consultorios y centros médicos con varios profesionales</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en red local</span><span class="chip">Pantalla TV sala de espera</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agenda por médico con horarios y excepciones</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Alta, reprogramación y estado de turnos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ficha de pacientes con historial</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Médicos, especialidades y consultorios</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cola de espera en tiempo real</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Llamado en pantalla de TV con voz</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Panel de recepción con resumen del día</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Roles: administrador, secretaria y médico</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Funciona 100% en la red local, aunque se corte internet.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">19</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#e67700">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Turnos y servicios</div>
+    <h2>ZenitStudio</h2>
+    <p class="tagline">Turnos con QR y cola en vivo para tu barbería.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Barberías, peluquerías y estéticas</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web / PWA con notificaciones</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reserva online por QR: servicio, barbero y horario</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento del turno y check-in al llegar</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cola que se recalcula sola en vivo</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Horarios por barbero, pausas y días bloqueados</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Recordatorios por WhatsApp, mail y push</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Caja, reportes y varias sucursales</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tienda de productos con pedidos online</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Asistente que configura la barbería en minutos</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>El cliente ve la cola en vivo y sabe cuándo le toca.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">20</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#e67700">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Turnos y servicios</div>
+    <h2>TuGym Online</h2>
+    <p class="tagline">Socios, cuotas, rutinas y asistencia del gimnasio en un solo lugar.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Gimnasios, boxes y centros de fitness</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web en la nube</span><span class="chip">App del socio (PWA)</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Socios con foto y estado de la cuota</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Planes de membresía configurables</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pagos con inicio y vencimiento</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aviso automático de cuotas por vencer</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Caja diaria con apertura y cierre</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rutinas y biblioteca de ejercicios con imágenes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Portal del socio: carnet digital y rutina</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Check-in por geolocalización o en recepción</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>El socio marca asistencia desde el celular, validada por cercanía.</p>
+  </div>
+  <footer>
+    <span></span>
+    <span class="pn">21</span>
+  </footer>
+</section>
+<section class="page prod" style="--c:#e67700">
+  <div class="band"></div>
+  <header>
+    <div class="cat">Turnos y servicios</div>
+    <h2>GestorPro</h2>
+    <p class="tagline">Presupuestos automáticos por WhatsApp y toda la gestoría en orden.</p>
+  </header>
+  <div class="meta">
+    <div><span class="lbl">Ideal para</span><span class="val">Gestorías del automotor y productores de seguros</span></div>
+    <div><span class="lbl">Plataformas</span><span class="chips"><span class="chip">Web pública, portal y panel (instalable)</span></span></div>
+  </div>
+  <h3>Funciones principales</h3>
+  <ul class="fn">
+    <li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bot de WhatsApp que presupuesta trámites al instante</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cotizador público a partir de la patente</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Carpeta por trámite: documentación, 08 y saldo</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pólizas con cuotas, endosos y vencimientos</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Portal del asegurado con pólizas y comprobantes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cobros con link de Mercado Pago y recibo PDF</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Siniestros, caja, agenda y reportes</span></li><li><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e67700" opacity=".14"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#e67700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plantillas de mensajes editables</span></li>
+  </ul>
+  <div class="dif">
+    <div class="lbl">Lo que lo distingue</div>
+    <p>Presupuesta solo por WhatsApp y lleva el trámite hasta el cobro.</p>
+  </div>
+  <footer>
+    <span>Implementado en: <b>MEVAK Gestión y Seguros</b></span>
+    <span class="pn">22</span>
+  </footer>
+</section></body></html>
