@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Arroz 1 kg">
+<rect width="400" height="400" fill="#fff7e6"/>
+<ellipse cx="200" cy="360" rx="110" ry="14" fill="#000" opacity="0.08"/>
+<path d="M130 110 Q200 80 270 110 L280 340 Q200 360 120 340 Z" fill="#f4c95d"/>
+<path d="M130 110 Q200 80 270 110 L268 135 Q200 110 132 135 Z" fill="#8a5a00" opacity="0.5"/>
+<rect x="150" y="190" width="100" height="90" rx="12" fill="#ffffff" opacity="0.88"/>
+<text x="200" y="232" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#8a5a00" text-anchor="middle">Arroz</text>
+<text x="200" y="258" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#8a5a00" text-anchor="middle">1 kg</text>
+</svg>
