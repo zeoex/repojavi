@@ -74,7 +74,9 @@ export const merchantProfileSchema = z.object({
 
 const hhmm = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, "Formato HH:MM");
 export const hoursSchema = z.array(
-  z.object({ dayOfWeek: z.number().int().min(0).max(6), opensAt: hhmm, closesAt: hhmm }),
+  z
+    .object({ dayOfWeek: z.number().int().min(0).max(6), opensAt: hhmm, closesAt: hhmm })
+    .refine((h) => h.opensAt !== h.closesAt, { message: "La hora de apertura y cierre no pueden ser iguales" }),
 ).max(21);
 
 export const zoneSchema = z.object({
@@ -105,7 +107,7 @@ export const variantSchema = z.object({
   price: moneyString,
   promoPrice: optionalMoneyString,
   stock: z.coerce.number().int().min(0, "El stock no puede ser negativo").max(1_000_000),
-  minStock: z.coerce.number().int().min(0).max(1_000_000).optional().nullable(),
+  minStock: z.preprocess((v) => (v === "" || v === undefined ? null : v), z.coerce.number().int().min(0).max(1_000_000).nullable()),
   active: z.boolean().default(true),
 });
 

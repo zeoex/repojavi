@@ -247,6 +247,14 @@ export async function updateOrderStatusByMerchant(actor: Actor, merchantId: stri
       if (to === "DELIVERED" && order.status === "ON_THE_WAY") {
         await tx.delivery.updateMany({ where: { orderId }, data: { status: "DELIVERED", deliveredAt: new Date() } });
       }
+      if (to === "READY" && (order.status === "ON_THE_WAY" || order.status === "COURIER_ASSIGNED")) {
+        // Entrega fallida / devuelto al comercio: la entrega vuelve a esperar asignación
+        const d = await tx.delivery.findUnique({ where: { orderId } });
+        if (d) {
+          await tx.delivery.update({ where: { id: d.id }, data: { status: "PENDING_ASSIGNMENT", courierId: null } });
+          await tx.deliveryEvent.create({ data: { deliveryId: d.id, status: "PENDING_ASSIGNMENT", actorId: actor.userId, note: note ?? "Devuelto al comercio" } });
+        }
+      }
       if (to === "ON_THE_WAY") {
         await tx.delivery.updateMany({ where: { orderId }, data: { status: "PICKED_UP", pickedUpAt: new Date() } });
       }
