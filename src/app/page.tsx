@@ -27,7 +27,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
             name="q"
             required
             placeholder="¿Qué necesitás? Ej: yerba, pan, ibuprofeno"
-            className="w-full flex-1 rounded-xl border-0 px-4 py-3 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-4 focus:ring-brand-200"
+            className="w-full flex-1 rounded-xl border-0 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-4 focus:ring-brand-200"
           />
           <button type="submit" className="rounded-xl bg-accent-500 px-5 py-3 font-semibold text-white hover:bg-accent-600">
             Buscar
